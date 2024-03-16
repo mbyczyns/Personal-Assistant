@@ -11,13 +11,14 @@ public class Main {
         }
     }
 
-    public static void newTask(Scanner scanner, User user){
+    public static void newTask( User user){
+        Scanner scanner1 = new Scanner(System.in);
         System.out.println("What is the title of your task?");
-        String title =  scanner.nextLine();
+        String title =  scanner1.nextLine();
         System.out.println("Describe your task:");
-        String description = scanner.nextLine();
+        String description = scanner1.nextLine();
         System.out.println("How many days have you got?");
-        int time = scanner.nextInt();
+        int time = scanner1.nextInt();
         user.addTask(new Task(title, time, description));
     }
     public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Main {
             System.out.println("5 - Exit program");
             int choice = scanner.nextInt();
             if (choice ==1) user1.getTasks();
-            else if (choice ==2) newTask(scanner,user1);
+            else if (choice ==2) newTask(user1);
             else if (choice ==3) {
                 System.out.println("Which task do you want to mark as done?");
                 int finishedTask = scanner.nextInt();

@@ -1,6 +1,6 @@
 public class Task {
     private String title;
-    private int daysLeft;
+    public int daysLeft;
     private String description;
     private boolean status;
 
@@ -33,7 +33,7 @@ public class Task {
     }
 
     public void decreaseDaysLeft(){
-        this.daysLeft-=1;
+        this.daysLeft--;
     }
 
     public void taskDone(){

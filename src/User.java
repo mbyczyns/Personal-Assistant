@@ -4,7 +4,7 @@ import java.util.List;
 public class User {
     private int userID;
     private String username;
-    private List<Task> toDoList;
+    public List<Task> toDoList;
 
     public User(int userID, String username) {
         this.userID = userID;
