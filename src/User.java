@@ -35,4 +35,9 @@ public class User {
         }
     }
 
+    public void taskDone(int index){
+        Task thistask = toDoList.get(index - 1);
+        thistask.taskDone();
+    }
+
 }

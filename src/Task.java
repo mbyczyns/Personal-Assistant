@@ -34,6 +34,10 @@ public class Task {
 
     public void decreaseDaysLeft(){
         this.daysLeft-=1;
+    }
 
+    public void taskDone(){
+        this.status = true;
+        System.out.println("Congratulations!");
     }
 }
