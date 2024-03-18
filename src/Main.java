@@ -7,6 +7,7 @@ public class Main {
         for (User user:userList){
             for (Task task:user.getToDoList()){
                 task.decreaseDaysLeft();
+                System.out.println(task.daysLeft);
             }
         }
     }
@@ -28,6 +29,7 @@ public class Main {
         String name = scanner.nextLine();
         System.out.println("Welcome "+name);
         User user1 = new User(1, name);
+        userList.add(user1);
         while(true){
             System.out.println("Choose your action: ");
             System.out.println("1 - List your tasks");
@@ -44,6 +46,7 @@ public class Main {
                 user1.taskDone(finishedTask);
             }
             else if (choice==4){
+                System.out.println(userList);
                 skipDay(userList);
             }
             else{
